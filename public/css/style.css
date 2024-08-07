@@ -208,6 +208,17 @@ img{
 .article_ul:hover li:hover{
     filter: none;
 }
+.pagination{
+    font-size: 1.3rem;
+    color: var(--gray);
+    text-decoration: none;
+    margin-top: 40px;
+    display: inline-block;
+}
+.pagination:hover{
+    color: var(--black);
+}
+
 .article{
     white-space: pre-wrap;
 }
@@ -215,4 +226,57 @@ img{
 .footer{
     margin: 4rem;
     text-align: center;
+}
+
+/*Search Bar*/
+.searchBar{
+    
+    background-color: var(--black);
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.searchBar.open{
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+.searchBar input{
+    margin: 0;
+    padding: 0;
+}
+#searchClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--gray-light);
+    padding: 15px;
+}
+/*Dashboard Admin*/
+.admin_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin_posts{
+    padding: 0;
+    margin: 0;
+}
+.admin_post_controls form{
+    display: inline-block;
+}
+.admin_post_controls .btn{
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--gray-light);
+    border: 0;
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 4px 8px;
+    line-height: 2;
+}
+.admin_post li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
