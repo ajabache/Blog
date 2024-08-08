@@ -38,19 +38,19 @@ router.get('', async (req, res) => {
 });
 
 
-/*router.get('', async (req, res) => {
-    const locals = {
-        title: "Blog",
-        description: "blog blog blog"
-    }
+// router.get('', async (req, res) => {
+//     const locals = {
+//         title: "Blog",
+//         description: "blog blog blog"
+//     }
 
-    try{
-        const data = await Post.find();
-        res.render('index', {locals, data});
-    } catch (error){
-        console.log(error);
-    }
-});*/
+//     try{
+//         const data = await Post.find();
+//         res.render('index', {locals, data});
+//     } catch (error){
+//         console.log(error);
+//     }
+// });
 
 //Get
 //Post :id
