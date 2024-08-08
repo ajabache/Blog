@@ -233,26 +233,45 @@ img{
     visibility: hidden;
     transform: translateY(-100px);
     background-color: var(--black);
-    padding: 4px 0;
+    padding: 10px 20px;
     position: absolute;
     left: 0;
     right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 .searchBar.open{
     transform: translateY(0);
-    transition: transform 0.1s;
+    transition: transform 0.3s ease-in-out;
+    visibility: visible;
+}
+.searchBar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .searchBar input{
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+}
+.searchBar input::placeholder{
+    color: var(--gray-light);
 }
 #searchClose{
-    position: absolute;
-    top: 0;
-    right: 0;
     color: var(--gray-light);
-    padding: 15px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
+#searchClose:hover{
+    color: var(--white);
+}
+
 /*Dashboard Admin*/
 .admin_title{
     display: flex;

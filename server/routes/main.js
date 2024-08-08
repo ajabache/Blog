@@ -55,21 +55,48 @@ router.get('', async (req, res) => {
 //Get
 //Post :id
 router.get('/post/:id', async (req, res) => {
-    try{
+    try {
         let slug = req.params.id;
-
+        const data = await Post.findById({ _id: slug });
+        if (!data) {
+            return res.status(404).send('Post not found');
+        }
         const locals = {
-            title: "blog",
+            title: data.title,
+            description: "blog blog blog"
+        };
+        res.render('post', { locals, data });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+//POST
+//Post - searchTerm
+
+router.post('/search', async (req, res) => {
+    try{
+        const locals = {
+            title: "Search",
             description: "blog blog blog"
         }
-
-        const data = await Post.findById({ _id: slug});
-        res.render('post', {locals, data});
+        let searchTerm = req.body.searchTerm;
+        const searchNoSpecialChar = searchTerm.replace(/[a-zA-Z0-9]/g, "")
+        const data = await Post.find({
+            $or: [
+                { title: { $regex: new RegExp(searchNoSpecialChar, 'i')}},
+                { body: { $regex: new RegExp(searchNoSpecialChar, 'i')}}
+            ]
+        });
+        res.render("search", {
+            data,
+            locals
+        });
     } catch (error){
         console.log(error);
     }
 });
-
 
 
 
