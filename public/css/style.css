@@ -295,7 +295,7 @@ img{
     padding: 4px 8px;
     line-height: 2;
 }
-.admin_post li{
+.admin_posts li{
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
