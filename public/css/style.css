@@ -220,7 +220,8 @@ img{
 }
 
 .article{
-    white-space: pre-wrap;
+    white-space: pre-line;
+    text-align: justify;
 }
 /*Footer*/
 .footer{

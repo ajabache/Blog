@@ -11,7 +11,7 @@ router.get('', async (req, res) => {
             description: "blog blog blog"
         };
 
-        let perPage = 3;
+        let perPage = 10;
         let page = parseInt(req.query.page) || 1;
 
         const data = await Post.aggregate([
