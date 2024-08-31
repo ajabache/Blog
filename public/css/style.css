@@ -272,6 +272,30 @@ img{
 #searchClose:hover{
     color: var(--white);
 }
+/*About*/
+.about{
+    padding: 10px 0;
+    text-align: justify;
+}
+.about_heading{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.about_body{
+    font-size: var(--font-size-base);
+}
+/*Contact*/
+.contact{
+    padding: 10px 0;
+    text-align: justify;
+}
+.contact_heading{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.contact_body{
+    font-size: var(--font-size-base);
+}
 
 /*Dashboard Admin*/
 .admin_title{
