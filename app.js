@@ -1,4 +1,4 @@
-require('dotenv').config;
+require('dotenv').config();
 
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
@@ -25,7 +25,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({
-        mongoUrl: 'mongodb+srv://ajtheinventor23:X3MCvLxffzq2BfIO@cluster0.7p0uwlp.mongodb.net/blog'
+        mongoUrl: 'mongodb://127.0.0.1:27017/blog'
     }),
     //cookie: {maxAge: new Date (Date.now() + (3600000))}
 }))

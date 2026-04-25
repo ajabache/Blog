@@ -26,9 +26,6 @@ const authMiddleware = (req, res, next) => {
     }
 }
 
-module.exports = authMiddleware;
-
-
 
 //Get
 //Admin - log in page
@@ -218,7 +215,7 @@ router.post('/register', async (req, res) => {
             res.status(201).json({message: 'User Created', user});
         }catch (error){
             if(error.code === 11000){
-                req.status(409).json({message: 'User already in use'});
+                res.status(409).json({message: 'User already in use'});
             }
             res.status(500).json({message: 'Internal server error'});
         }
